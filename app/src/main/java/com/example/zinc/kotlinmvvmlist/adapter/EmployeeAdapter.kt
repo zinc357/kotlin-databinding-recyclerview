@@ -1,4 +1,4 @@
-package com.example.zinc.kotlinmvvmlist
+package com.example.zinc.kotlinmvvmlist.adapter
 
 import android.content.Context
 import android.databinding.DataBindingUtil
@@ -6,6 +6,8 @@ import android.databinding.ViewDataBinding
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import com.example.zinc.kotlinmvvmlist.BR
+import com.example.zinc.kotlinmvvmlist.R
 import com.example.zinc.kotlinmvvmlist.model.Employee
 import java.util.*
 

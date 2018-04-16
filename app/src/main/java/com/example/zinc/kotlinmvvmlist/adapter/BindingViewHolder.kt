@@ -1,4 +1,4 @@
-package com.example.zinc.kotlinmvvmlist
+package com.example.zinc.kotlinmvvmlist.adapter
 
 import android.databinding.ViewDataBinding
 import android.support.v7.widget.RecyclerView

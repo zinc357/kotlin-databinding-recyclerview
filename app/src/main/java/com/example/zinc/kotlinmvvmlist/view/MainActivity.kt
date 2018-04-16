@@ -4,10 +4,9 @@ import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import android.view.View
 import android.widget.Toast
 import com.example.zinc.kotlinmvvmlist.model.Employee
-import com.example.zinc.kotlinmvvmlist.EmployeeAdapter
+import com.example.zinc.kotlinmvvmlist.adapter.EmployeeAdapter
 import com.example.zinc.kotlinmvvmlist.R
 import com.example.zinc.kotlinmvvmlist.databinding.ActivityMainBinding
 import com.example.zinc.kotlinmvvmlist.viewmodel.EmployeeListViewModel

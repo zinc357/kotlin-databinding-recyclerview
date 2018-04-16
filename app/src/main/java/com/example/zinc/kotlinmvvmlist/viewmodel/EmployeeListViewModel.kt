@@ -1,7 +1,7 @@
 package com.example.zinc.kotlinmvvmlist.viewmodel
 
 import android.view.View
-import com.example.zinc.kotlinmvvmlist.EmployeeAdapter
+import com.example.zinc.kotlinmvvmlist.adapter.EmployeeAdapter
 import com.example.zinc.kotlinmvvmlist.model.Employee
 
 class EmployeeListViewModel(private val mEmployeeAdapter: EmployeeAdapter) {
