@@ -6,7 +6,7 @@
 
         <variable
             name="item"
-            type="com.example.zinc.kotlinmvvmlist.model.Employee"/>
+            type="com.example.zinc.kotlinmvvmlist.model.Employee2"/>
     </data>
 
     <LinearLayout

@@ -5,35 +5,16 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.widget.Toast
-import com.example.zinc.kotlinmvvmlist.model.Employee
-import com.example.zinc.kotlinmvvmlist.adapter.EmployeeAdapter
 import com.example.zinc.kotlinmvvmlist.R
+import com.example.zinc.kotlinmvvmlist.adapter.EmployeeAdapter
 import com.example.zinc.kotlinmvvmlist.databinding.ActivityMainBinding
+import com.example.zinc.kotlinmvvmlist.model.Employee2
 import com.example.zinc.kotlinmvvmlist.viewmodel.EmployeeListViewModel
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var mBinding: ActivityMainBinding
     lateinit var mEmployeeAdapter: EmployeeAdapter
-
-//    inner class Presenter {
-//        fun onClickAddItem(view: View) {
-//            mEmployeeAdapter.add(Employee("hah", "1", false))
-//        }
-//
-//        fun onClickRemoveItem(view: View) {
-//            mEmployeeAdapter.remove()
-//        }
-//
-//        fun onClickAddAll(view: View) {
-//            val demoList = ArrayList<Employee>()
-//            demoList.add(Employee("Zhai", "Mark", false))
-//            demoList.add(Employee("Zhai2", "Mark2", false))
-//            demoList.add(Employee("Zhai3", "Mark3", true))
-//            demoList.add(Employee("Zhai4", "Mark4", false))
-//            mEmployeeAdapter.addAll(demoList)
-//        }
-//    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,19 +25,12 @@ class MainActivity : AppCompatActivity() {
         mEmployeeAdapter = EmployeeAdapter(this)
         mBinding.recyclerView.adapter = mEmployeeAdapter
         mEmployeeAdapter.setListener(object : EmployeeAdapter.OnItemClickListener {
-            override fun onEmployeeClick(employee: Employee) {
+            override fun onEmployeeClick(employee: Employee2) {
                 Toast.makeText(this@MainActivity,
                         employee.firstName, Toast.LENGTH_SHORT).show()
             }
         })
 
         mBinding.listvm = EmployeeListViewModel(mEmployeeAdapter)
-//
-//        val demoList = ArrayList<Employee>()
-//        demoList.add(Employee("Zhai", "Mark", false))
-//        demoList.add(Employee("Zhai2", "Mark2", false))
-//        demoList.add(Employee("Zhai3", "Mark3", true))
-//        demoList.add(Employee("Zhai4", "Mark4", false))
-//        mEmployeeAdapter.addAll(demoList)
     }
 }
