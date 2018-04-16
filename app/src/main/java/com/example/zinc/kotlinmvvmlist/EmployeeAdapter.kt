@@ -66,7 +66,9 @@ class EmployeeAdapter : RecyclerView.Adapter<BindingViewHolder<ViewDataBinding>>
     }
 
     fun addAll(employees: ArrayList<Employee>) {
+        val position = mRandom.nextInt(mEmployeeList.size + 1)
         mEmployeeList.addAll(employees)
+        notifyItemInserted(position)
     }
 
     val mRandom = Random(System.currentTimeMillis())

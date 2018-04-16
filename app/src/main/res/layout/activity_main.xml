@@ -3,9 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+        <!--<variable-->
+            <!--name="presenter"-->
+            <!--type="com.example.zinc.kotlinmvvmlist.view.MainActivity.Presenter"/>-->
         <variable
-            name="presenter"
-            type="com.example.zinc.kotlinmvvmlist.view.MainActivity.Presenter"/>
+            name="listvm"
+            type="com.example.zinc.kotlinmvvmlist.viewmodel.EmployeeListViewModel"/>
     </data>
 
     <LinearLayout
@@ -17,13 +20,19 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="@{presenter.onClickAddItem}"
+            android:text="add All"
+            android:onClick="@{listvm.onClickAddAll}"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{listvm.onClickAddItem}"
             android:text="Add item"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="@{presenter.onClickRemoveItem}"
+            android:onClick="@{listvm.onClickRemoveItem}"
             android:text="Remove item"/>
 
         <android.support.v7.widget.RecyclerView
